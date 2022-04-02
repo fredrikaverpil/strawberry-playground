@@ -1,4 +1,4 @@
-import typing
+from typing import List, Optional
 
 from sbplay.models.book import Book
 
@@ -10,7 +10,7 @@ BOOKS = [
 ]
 
 
-def get_books(title: typing.Optional[str]) -> typing.List[Book]:
+def get_books(title: Optional[str]) -> List[Book]:
     if not title:
         return BOOKS
 
