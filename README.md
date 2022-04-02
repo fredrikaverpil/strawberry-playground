@@ -12,7 +12,7 @@ poetry install
 
 ```bash
 # development server
-strawberry server schema
+strawberry server sbplay.schema
 ```
 
 The `schema.graphql` file is generated upon running the developer server.
@@ -57,5 +57,5 @@ query MyQuery {
 Export types for python and typescript:
 
 ```bash
-strawberry codegen --schema schema --output-dir ./output -p python -p typescript .graphql/query.graphql
+strawberry codegen --schema sbplay.schema --output-dir ./output -p python -p typescript .graphql/query.graphql
 ```
