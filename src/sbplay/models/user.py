@@ -12,7 +12,7 @@ class User(BaseModel):
     friends: List[int] = []
 
     @validator("name")
-    def name_cannot_contain_space(self, v):
+    def name_cannot_contain_space(cls, v):
         if " " in v:
             raise ValueError("must not contain a space")
         return v
