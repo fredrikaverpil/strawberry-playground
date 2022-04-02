@@ -10,9 +10,16 @@ With a virtual environment activated:
 poetry install
 ```
 
+Then either run the development server:
+
 ```bash
-# development server
 strawberry server sbplay.schema
+```
+
+...or run the production server:
+
+```bash
+sbplay
 ```
 
 The `schema.graphql` file is generated upon running the developer server.
