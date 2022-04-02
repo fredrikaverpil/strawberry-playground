@@ -10,7 +10,6 @@ from sbplay.services.users import get_users
 
 @strawberry.type
 class Query:
-
     @strawberry.field
     def books(self, title: Optional[str] = None) -> List[Book]:
         return get_books(title)
