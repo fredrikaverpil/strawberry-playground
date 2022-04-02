@@ -1,3 +1,4 @@
+import pathlib
 import typing
 
 import strawberry
@@ -15,3 +16,6 @@ class Query:
 
 
 schema = strawberry.Schema(query=Query)
+
+with open(pathlib.Path("query.graphql"), "w") as outfile:
+    outfile.write(str(schema))
