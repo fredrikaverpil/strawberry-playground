@@ -26,7 +26,7 @@ The `schema.graphql` file is generated upon running the developer server.
 
 ## Perform queries
 
-- Go to http://0.0.0.0:8000/graphql (development server) or http://127.0.0.1:8000/graphql (production server)
+- Go to http://0.0.0.0:8000/graphql
 - Run queries below
 
 ```graphql
