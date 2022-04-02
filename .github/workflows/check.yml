@@ -34,3 +34,57 @@ jobs:
 
       - run: poetry run black --check --diff src tests
       - run: poetry run isort --check --diff src tests
+
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - uses: actions/setup-python@v2
+        with:
+          python-version: ${{ env.PYTHON_VERSION }}
+
+      - uses: fredrikaverpil/setup-pipx@v1.5
+
+      - uses: actions/cache@v2
+        id: cache
+        with:
+          path: |
+            ~/.cache/pip
+            ~/.cache/pypoetry/virtualenvs
+            .venv_pipx
+          key: ${{ runner.os }}-${{ runner.arch }}-py-${{ env.PYTHON_VERSION }}-poetry-${{ env.POETRY_VERSION }}-${{ hashFiles('poetry.lock') }}
+
+      - run: pipx install poetry==${{ env.POETRY_VERSION }}
+        shell: bash
+
+      - run: poetry install
+
+      - run: poetry run flake8 src tests
+
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - uses: actions/setup-python@v2
+        with:
+          python-version: ${{ env.PYTHON_VERSION }}
+
+      - uses: fredrikaverpil/setup-pipx@v1.5
+
+      - uses: actions/cache@v2
+        id: cache
+        with:
+          path: |
+            ~/.cache/pip
+            ~/.cache/pypoetry/virtualenvs
+            .venv_pipx
+          key: ${{ runner.os }}-${{ runner.arch }}-py-${{ env.PYTHON_VERSION }}-poetry-${{ env.POETRY_VERSION }}-${{ hashFiles('poetry.lock') }}
+
+      - run: pipx install poetry==${{ env.POETRY_VERSION }}
+        shell: bash
+
+      - run: poetry install
+
+      - run: poetry run pytest
