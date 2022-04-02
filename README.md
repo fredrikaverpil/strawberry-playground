@@ -22,8 +22,6 @@ strawberry server sbplay.schema
 sbplay
 ```
 
-The `schema.graphql` file is generated upon running the developer server.
-
 ## Perform queries
 
 - Go to http://0.0.0.0:8000/graphql
@@ -74,4 +72,18 @@ Export types for python and typescript into the `output` folder:
 
 ```bash
 strawberry codegen --schema sbplay.schema --output-dir ./output -p python -p typescript .graphql/query.graphql
+```
+
+## Generate schema
+
+The schema can be printed...
+
+```bash
+strawberry export-schema sbplay.schema:schema
+```
+
+...or written to disk:
+
+```bash
+strawberry export-schema sbplay.schema:schema > .graphql/schema.graphql
 ```
