@@ -4,8 +4,8 @@ type Book {
 }
 
 type Query {
-  books: [Book!]!
   users: [UserType!]!
+  books(title: String = null): [Book!]!
 }
 
 type UserType {
