@@ -1,4 +1,4 @@
-# strawberry-playground
+# strawberry-playground 🍓
 
 Playing around with [Strawberry GraphQL](https://strawberry.rocks).
 
