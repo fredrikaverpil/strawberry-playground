@@ -18,4 +18,4 @@ def get_books(title: Optional[str]) -> List[Book]:
     if not title:
         return BOOKS
 
-    return [book for book in BOOKS if book.title == title]
+    return [book for book in BOOKS if book.title.lower() == title.lower()]

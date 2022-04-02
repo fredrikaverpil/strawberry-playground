@@ -17,7 +17,7 @@ strawberry server sbplay.schema
 
 The `schema.graphql` file is generated upon running the developer server.
 
-## Perform query
+## Perform queries
 
 - Go to http://0.0.0.0:8000/graphql
 - Run query
@@ -32,6 +32,15 @@ The `schema.graphql` file is generated upon running the developer server.
   users {
     name
     friends
+  }
+}
+```
+
+```graphql
+query TestQuery($title: String! = "the lord of the rings") {
+  books(title: $title) {
+    title
+    author
   }
 }
 ```
