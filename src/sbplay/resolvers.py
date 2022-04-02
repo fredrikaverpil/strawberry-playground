@@ -10,5 +10,8 @@ from sbplay.services.users import get_users
 
 @strawberry.type
 class Query:
-    books: typing.List[Book] = strawberry.field(resolver=get_books)
+    @strawberry.field
+    def books(self, title: typing.Optional[str] = None) -> typing.List[Book]:
+        return get_books(title)
+
     users: typing.List[UserType] = strawberry.field(resolver=get_users)
