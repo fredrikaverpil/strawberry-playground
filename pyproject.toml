@@ -1,0 +1,23 @@
+[tool.poetry]
+name = "sbplay"
+version = "0.1.0"
+description = ""
+authors = ["Fredrik Averpil <fredrik.averpil@gmail.com>"]
+license = "MIT"
+
+[tool.poetry.dependencies]
+python = ">=3.10.0,<3.11.0"
+strawberry-graphql = {extras = ["debug-server"], version = "^0.104.1"}
+pydantic = "^1.9.0"
+
+[tool.poetry.dev-dependencies]
+flake8 = "^4.0.1"
+black = "^22.3.0"
+isort = "^5.10.1"
+flake8-bandit = "^3.0.0"
+flake8-bugbear = "^22.3.23"
+mypy = "^0.942"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
