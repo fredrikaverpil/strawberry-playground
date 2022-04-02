@@ -52,7 +52,7 @@ query TestQuery($title: String! = "the lord of the rings") {
 
 ## Codegen
 
-Create a `query.graphql` file with the following contents:
+Create a `.graphql/query.graphql` file with the following contents:
 
 ```graphql
 query MyQuery {
