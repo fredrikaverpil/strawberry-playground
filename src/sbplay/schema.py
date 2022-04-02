@@ -1,5 +1,3 @@
-import pathlib
-
 import strawberry
 
 from sbplay.resolvers import Query
