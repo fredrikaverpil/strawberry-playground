@@ -18,7 +18,7 @@ def create_app():
 
 def main():
     dotenv.load_dotenv("env/.env.prod")
-    uvicorn.run("sbplay.app:create_app", factory=True, reload=True)
+    uvicorn.run("sbplay.app:create_app", reload=False)
 
 
 if __name__ == "__main__":
