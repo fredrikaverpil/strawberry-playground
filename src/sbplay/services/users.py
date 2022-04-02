@@ -3,10 +3,6 @@ from datetime import datetime, timezone
 
 from sbplay.models.user import User, UserType
 
-# id: strawberry.auto
-# name: strawberry.auto
-# friends: strawberry.auto
-
 
 def get_users_from_db():
     """This simulates fetching from db."""
