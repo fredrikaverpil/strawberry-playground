@@ -7,6 +7,10 @@ BOOKS = [
         title="The Great Gatsby",
         author="F. Scott Fitzgerald",
     ),
+    Book(
+        title="The Lord Of The Rings",
+        author="J.R.R. Tolkien",
+    ),
 ]
 
 
