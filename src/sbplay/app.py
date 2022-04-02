@@ -7,7 +7,7 @@ from sbplay.schema import schema
 
 
 def create_app():
-    graphql_app = GraphQL(schema)
+    graphql_app = GraphQL(schema, graphiql=False)
 
     app = Starlette()
     app.add_route("/graphql", graphql_app)
