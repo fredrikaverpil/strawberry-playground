@@ -15,6 +15,8 @@ poetry install
 strawberry server schema
 ```
 
+The `schema.graphql` file is generated upon running the developer server.
+
 ## Perform query
 
 - Go to http://0.0.0.0:8000/graphql
@@ -32,4 +34,28 @@ strawberry server schema
     friends
   }
 }
+```
+
+## Codegen
+
+Create a `query.graphql` file with the following contents:
+
+```graphql
+query MyQuery {
+  books {
+    title
+    author
+  }
+  users {
+    id
+    name
+    friends
+  }
+}
+```
+
+Export types for python and typescript:
+
+```bash
+strawberry codegen --schema schema --output-dir ./output -p python -p typescript query.graphql
 ```

@@ -1,15 +1,11 @@
-type Book {
-  title: String!
-  author: String!
-}
-
-type Query {
-  books: [Book!]!
-  users: [UserType!]!
-}
-
-type UserType {
-  id: Int!
-  name: String!
-  friends: [Int!]
+query MyQuery {
+  books {
+    title
+    author
+  }
+  users {
+    id
+    name
+    friends
+  }
 }
