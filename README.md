@@ -57,5 +57,5 @@ query MyQuery {
 Export types for python and typescript:
 
 ```bash
-strawberry codegen --schema schema --output-dir ./output -p python -p typescript query.graphql
+strawberry codegen --schema schema --output-dir ./output -p python -p typescript .graphql/query.graphql
 ```

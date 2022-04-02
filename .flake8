@@ -1,0 +1,8 @@
+[flake8]
+per-file-ignores =
+    #  S101 Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+    # A003 class attribute "id" is shadowing a python builtin
+    # I900 'strawberry' not listed as a requirement
+    tests/*.py: S101 A003 I900
+    src/**/*.py: S101 A003 I900
+
