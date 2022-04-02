@@ -1,20 +1,20 @@
 from typing import List, Optional
 
-from sbplay.models.book import Book
+from sbplay.models.book import BookType
 
 BOOKS = [
-    Book(
+    BookType(
         title="The Great Gatsby",
         author="F. Scott Fitzgerald",
     ),
-    Book(
+    BookType(
         title="The Lord Of The Rings",
         author="J.R.R. Tolkien",
     ),
 ]
 
 
-def get_books(title: Optional[str]) -> List[Book]:
+def get_books(title: Optional[str]) -> List[BookType]:
     if not title:
         return BOOKS
 

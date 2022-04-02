@@ -2,6 +2,6 @@ import strawberry
 
 
 @strawberry.type
-class Book:
+class BookType:
     title: str
     author: str
